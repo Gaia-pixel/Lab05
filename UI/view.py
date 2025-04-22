@@ -32,9 +32,20 @@ class View(ft.UserControl):
             hint_text="Insert a your name"
         )
 
+        self.dd_corso = ft.Dropdown(
+            label="corso",
+            width=550,
+            hint_text="Selezionare un corso",
+            options=[],
+            autofocus=True,
+            on_change=self._controller.leggi_corso
+        )
+        ##populate dropdown
+        self._controller.populate_dd_corso()
+
         # button for the "hello" reply
         self.btn_hello = ft.ElevatedButton(text="Hello", on_click=self._controller.handle_hello)
-        row1 = ft.Row([self.txt_name, self.btn_hello],
+        row1 = ft.Row([self.dd_corso, self.txt_name, self.btn_hello],
                       alignment=ft.MainAxisAlignment.CENTER)
         self._page.controls.append(row1)
 
