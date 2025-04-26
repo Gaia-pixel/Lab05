@@ -20,5 +20,6 @@ def get_connection() -> mysql.connector.connection:
             return None
 
 
+
 class DBConnect:
     pass
