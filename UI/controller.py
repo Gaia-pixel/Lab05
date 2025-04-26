@@ -1,6 +1,5 @@
 import flet as ft
 
-
 class Controller:
     def __init__(self, view, model):
         # the view, with the graphical elements of the UI
@@ -68,7 +67,6 @@ class Controller:
                 self._view.txt_result.controls.append(ft.Text(f"{c}"))
 
         self._view.update_page()
-
 
     def leggi_corso(self, e):
         self.corso_selezionato = self._view.dd_corso.value
